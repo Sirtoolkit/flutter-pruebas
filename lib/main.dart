@@ -3,9 +3,11 @@ import 'package:flutter_prueba/provider/dialog.location.provider%20.dart';
 import 'package:flutter_prueba/provider/dialog.user.provider.dart';
 import 'package:flutter_prueba/provider/home.provider.dart';
 import 'package:flutter_prueba/screen/home.screen.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
   runApp(MyApp());
 }
 
