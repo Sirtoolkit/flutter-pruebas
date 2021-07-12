@@ -5,12 +5,14 @@ import 'package:provider/provider.dart';
 import 'package:flutter_prueba/services/services.dart';
 import 'package:flutter_prueba/routers/routes.dart';
 import 'package:flutter_prueba/themes/themes.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocalStorage.init();
   NavigationServices.init();
   Fluro.setupRouter();
+  setPathUrlStrategy();
   runApp(MyAppProvider());
 }
 
