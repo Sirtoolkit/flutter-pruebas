@@ -1,19 +1,21 @@
 part of 'views.dart';
 
-class ApiView extends StatefulWidget {
-  @override
-  _ApiViewState createState() => _ApiViewState();
-}
-
-class _ApiViewState extends State<ApiView> {
-  @override
-  void initState() {
-    super.initState();
-    Future.microtask(() => context.read<ApiProvider>().setUsers());
-  }
+class ApiView extends StatelessWidget {
+  // bool _initialized = false;
 
   @override
   Widget build(BuildContext context) {
+    // if (!_initialized) {
+    //   Future.microtask(() => context.read<ApiProvider>().setUsers());
+    //   _initialized = true;
+    //   print('object');
+    // }
+
+    // Future.delayed(Duration.zero, () {
+    //   Future.microtask(() => context.read<ApiProvider>().setUsers());
+    //   print('object');
+    // });
+
     final apiProvider = context.watch<ApiProvider>();
     final size = MediaQuery.of(context).size;
 

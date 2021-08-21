@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_prueba/model/User.model.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_prueba/providers/provider.dart';
